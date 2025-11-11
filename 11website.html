@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUEVARA HOMEWORK</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f8fb;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 60px; 
+      background: transparent;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .logo span:first-child {
+      color: #2d2d2d; 
+    }
+
+    .logo span:last-child {
+      color: #ff6200; 
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .market {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .market img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .cart {
+      position: relative;
+      background: #ff6200;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    .cart-count {
+      position: absolute;
+      top: -5px;
+      right: -6px;
+      background: #b42200;
+      color: #fff;
+      font-size: 10px;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 15px 60px;
+      align-items: center;
+    }
+
+    .filter-bar button {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .filter-bar .active {
+      background: #ff6200;
+      color: white;
+      border: none;
+    }
+
+    .filter-bar input {
+      flex-grow: 1;
+      max-width: 280px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-left: auto;
+      font-size: 15px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      color: #ff6200;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="logo"><span>SHOP</span><span>IER</span></h1>
+    <div class="top-bar">
+      <div class="market">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Market icon">
+        <span>Market</span>
+      </div>
+      <div class="cart">
+        🛒
+        <span class="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="filter-bar">
+    <button class="active">All</button>
+    <button>Men’s clothing</button>
+    <button>Jewelery</button>
+    <button>Electronics</button>
+    <button>Women’s clothing</button>
+    <input type="text" placeholder="Search products...">
+  </nav>
+
+  <main class="products">
+    <div class="card">
+      <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="Bag">
+      <h2>Fjallraven - Foldsack No. 1</h2>
+      <p>Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches)...</p>
+    </div>
+
+    <div class="card">
+      <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_UL640_QL65_ML3_.jpg" alt="T-shirt">
+      <h2>Mens Casual Premium Slim Fit T-Shirt</h2>
+      <p>Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight...</p>
+    </div>
+
+    <div class="card">
+      <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="Jacket">
+      <h2>Mens Cotton Jacket</h2>
+      <p>Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions such as working...</p>
+    </div>
+  </main>
+</body>
+</html>
